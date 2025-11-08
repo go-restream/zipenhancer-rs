@@ -1,0 +1,26 @@
+# ZipEnhancer Rust version configuration file
+# This configuration file contains all parameter settings for the audio noise reduction processor
+
+[model]
+# ONNX model file path
+path = "./model/ZipEnhancer_ONNX/ZipEnhancer.onnx"
+# Maximum number of retries for ONNX inference
+max_retries = 3
+# Number of threads for ONNX inference
+inference_threads = 4
+
+[audio]
+# Audio sample rate (Hz)
+sample_rate = 16000
+# Overlap ratio between segments (0.0 - 1.0)
+overlap_ratio = 0.1
+# Audio segment size (number of samples)
+segment_size = 16000
+
+[processing]
+# Enable automatic gain control (AGC)
+enable_agc = true
+# Enable performance monitoring
+enable_performance_monitoring = true
+# Verbose output mode
+verbose = true
